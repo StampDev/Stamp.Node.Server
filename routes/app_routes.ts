@@ -13,7 +13,11 @@ router.get('/', function (req: Express.Request, res: Express.Response) {
     var query = breeze.EntityQuery.from('occp');
 
     Sequelize.executeQuery(query).then(rst => {
+
         if (rst) {
+
+            var l = rst.length;
+
             //this.fill_datamanager(rst)
         } 
 
